@@ -22,9 +22,9 @@ class Form1(Form1Template):
         credit_amount_replacement -= sum_of_interest_replacement
         sum_of_interest += sum_of_interest_replacement
         
-      self.text_box_total_interest.text = round(sum_of_interest, 3)
-      self.text_box_total_to_return.text = round(sum_of_interest + credit_amount, 3)
-      self.text_box_monthly_return.text = round((sum_of_interest + credit_amount) / (years * 12), 3)
+      self.text_box_total_interest.text = "{:0.2f}".format(round(sum_of_interest, 3))
+      self.text_box_total_to_return.text = "{:0.2f}".format(round(sum_of_interest + credit_amount, 3))
+      self.text_box_monthly_return.text = "{:0.2f}".format(round((sum_of_interest + credit_amount) / (years * 12), 3))
       
     except:
       alert("Something went wrong. Please click reset and start over. Fill out the text boxes only with positive numeric values.")
